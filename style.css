@@ -1,0 +1,175 @@
+:root {
+  --primaryVeryDarkBlueMainBg: hsl(233, 47%, 7%);
+  --primaryDarkDesaturatedBlueCardBg: hsl(244, 38%, 16%);
+  --primarySoftVioletAccent: hsl(277, 64%, 61%);
+
+  --neutralWhite: hsl(0, 0%, 100%);
+  --neutralSlightWhiteMainParagraph: hsla(0, 0%, 100%, 0.75);
+  --neutralSlightWhiteStatHeading: hsla(0, 0%, 100%, 0.6);
+
+  --fontInter: "Inter", sans-serif;
+  --fontLexend: "Lexend Deca", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primaryVeryDarkBlueMainBg);
+}
+
+.paragraph {
+  line-height: 150%;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--fontLexend);
+  color: var(--neutralSlightWhiteMainParagraph);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2,
+h3 {
+  font-family: var(--fontInter);
+  color: var(--neutralWhite);
+}
+
+.violet {
+  color: var(--primarySoftVioletAccent);
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: inline-flex;
+  border-radius: 10px;
+  background-color: var(--primaryDarkDesaturatedBlueCardBg);
+}
+
+section.col1 {
+  padding: 70px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+section.col1 .ro1 h2 {
+  margin-bottom: 24px;
+}
+
+
+.ro2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.ro2 h3 {
+  font-size: 26px;
+  margin-bottom: 3px;
+}
+
+.ro2 .company,
+.ro2 .template,
+.ro2 .query {
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.col2 {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.col2 .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsla(277, 64%, 30%, 0.625);
+}
+
+.col2 img {
+  max-width: 490px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* RESPONSIVENESS */
+@media screen and (768px <=width <=1023px) {
+  body {
+    padding: 20px;
+  }
+
+  section.col1 {
+    padding: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .ro2 h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (320px <=width <=767px) {
+  body {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .col2 img {
+    border-radius: 10px 10px 0 0;
+    height: auto;
+    max-width: 100%;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .ro2 {
+    display: block;
+  }
+
+  section.col1 {
+    padding: 40px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .margin-bottom {
+    margin-bottom: 30px;
+  }
+}
